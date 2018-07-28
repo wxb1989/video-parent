@@ -32,7 +32,7 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     public Page<SysUser> getSysUsers(SysUserForm form) {
 
-        Page<SysUser> sysUserPage = null;
+        Page<SysUser> sysUserPage ;
 
         String realname = form.getRealname();
         Sort sort = new Sort(Sort.Direction.DESC, "id");
