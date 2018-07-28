@@ -1,5 +1,6 @@
 package com.video.web;
 
+import com.video.entity.sysuser.SysUser;
 import com.video.entity.sysuser.SysUserForm;
 import com.video.service.sysuser.SysUserService;
 import org.junit.Test;
@@ -17,6 +18,9 @@ public class VideoWebApplicationTests {
 
     @Test
     public  void maina() {
-        sysUserService.getSysUsers(new SysUserForm());
+        SysUserForm sysUser =new SysUserForm();
+        sysUser.setUsername("admin");
+
+        sysUserService.getSysUsers(sysUser);
     }
 }
